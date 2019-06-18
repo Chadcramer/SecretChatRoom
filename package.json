@@ -1,7 +1,7 @@
 {
-  "name": "secretchatroom",
+  "name": "PixelPictures",
   "version": "1.0.0",
-  "description": "chat room available to users only",
+  "description": "pixel formed pictures",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production --watch",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Chadcramer/SecretChatRoom.git"
+    "url": "git+https://github.com/Chadcramer/PixelPictures.git"
   },
   "author": "Chad Cramer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Chadcramer/SecretChatRoom/issues"
+    "url": "https://github.com/Chadcramer/PixelPictures/issues"
   },
-  "homepage": "https://github.com/Chadcramer/SecretChatRoom#readme",
+  "homepage": "https://github.com/Chadcramer/PixelPictures#readme",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
