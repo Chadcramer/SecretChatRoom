@@ -26,7 +26,10 @@
     "webpack-cli": "^3.3.4"
   },
   "dependencies": {
+    "color-convert": "^2.0.0",
     "express": "^4.17.1",
+    "jimp": "^0.6.4",
+    "png-js": "^0.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
