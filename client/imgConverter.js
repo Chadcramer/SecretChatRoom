@@ -6,20 +6,20 @@ var convert = require('color-convert');
 // Jimp.read('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/757px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg', (err, image) => {
 //     if (err) throw err;
 //     image
-//       .resize(100, 100) // resize
+//       .resize(84, 64) // resize
 //       .quality(60) // set JPEG quality
 //       .write('testimg.jpg'); // save
 //   });
 
-Jimp.read("testimg.jpg", function (err, image) {
-    for(let i = 0; i < 100; i++){
-        for(let j = 0; j < 100; j ++){
-            fs.appendFileSync('../data/picData.txt', Object.values((Jimp.intToRGBA(image.getPixelColor(i, j)))) + '\n')
-            // fs.appendFileSync('../data/picData.txt', JSON.stringify((Jimp.intToRGBA(image.getPixelColor(i, j)))))
-            // console.log(Jimp.intToRGBA(image.getPixelColor(i, j))); // returns the colour of that pixel e.g. 0xFFFFFFFF
-        }
-    }
-});
+// Jimp.read("testimg.jpg", function (err, image) {
+//     for(let i = 0; i < 64; i++){
+//         for(let j = 0; j < 84; j ++){
+//             fs.appendFileSync('../data/picData.txt', Object.values((Jimp.intToRGBA(image.getPixelColor(i, j)))) + '\n')
+//             // fs.appendFileSync('../data/picData.txt', JSON.stringify((Jimp.intToRGBA(image.getPixelColor(i, j)))))
+//             // console.log(Jimp.intToRGBA(image.getPixelColor(i, j))); // returns the colour of that pixel e.g. 0xFFFFFFFF
+//         }
+//     }
+// });
 
 let fromRBGtoHsv = function () {
     let hslArray = [];
@@ -74,9 +74,11 @@ let fromRBGtoHsv = function () {
             // if(h > 270 || h < 330){ colorArr.push('Pink')}
             colorArr.push('pink');
 
+        } else {
+            colorArr.push('black');
         }
     }
-    console.log(typeof colorArr[0]);
+    console.log(colorArr.length);
     // fs.writeFileSync('../data/colorArrData.txt', colorArr);
 }
 

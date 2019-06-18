@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Row from './Row.jsx';
 
 class App extends React.Component {
   render () {
     return ( 
-    <div>
-      Hello world
+      // 84 Rows
+    <div className="row">
+      < Row /> 
     </div>
     )}
 }
