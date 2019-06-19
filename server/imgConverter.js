@@ -9,7 +9,7 @@ var convert = require('color-convert');
 //     if (err) throw err;
 //     image
 //       .resize(151, 120) // resize
-//       .quality(60) // set JPEG quality
+//       .quality(95) // set JPEG quality
 //       .write('../testimg.jpg'); // save
 //   });
 
@@ -83,9 +83,9 @@ let fromRBGtoHsv = function () {
             colorArr.push('black');
         }
     }
-    // console.log(colorArr);
+    console.log(colorArr);
 
-    fs.writeFileSync('/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/data/colorArrData.txt', colorArr);
+    // fs.writeFileSync('/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/data/colorArrData.txt', colorArr);
 }
 
 fromRBGtoHsv();

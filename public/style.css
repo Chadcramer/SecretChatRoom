@@ -4,8 +4,6 @@ body {
   
 .wrapper {
     display: grid;
-    width: 100vw;
-    height: 100vw;
     /* number after repeat in grid-template-columns is the width (x value ) # of squares */
     grid-template-columns: repeat(151, auto);
     /* grid-gap: 0px; */
@@ -15,6 +13,6 @@ body {
 .box {
     /* background-color: white; */
     /* border: 1px solid black; */
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
 }
