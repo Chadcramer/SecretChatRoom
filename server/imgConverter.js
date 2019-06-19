@@ -8,34 +8,32 @@ var convert = require('color-convert');
 //     image
 //       .resize(84, 64) // resize
 //       .quality(60) // set JPEG quality
-//       .write('testimg.jpg'); // save
+//       .write('../testimg.jpg'); // save
 //   });
 
-// Jimp.read("testimg.jpg", function (err, image) {
+// Jimp.read("/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/testimg.jpg", function (err, image) {
 //     for(let i = 0; i < 64; i++){
-//         for(let j = 0; j < 84; j ++){
-//             fs.appendFileSync('../data/picData.txt', Object.values((Jimp.intToRGBA(image.getPixelColor(i, j)))) + '\n')
+//         for(let j = 0; j < 84; j++){
+//             fs.appendFileSync('/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/data/picData.txt', Object.values((Jimp.intToRGBA(image.getPixelColor(j, i)))) + '\n')
 //             // fs.appendFileSync('../data/picData.txt', JSON.stringify((Jimp.intToRGBA(image.getPixelColor(i, j)))))
 //             // console.log(Jimp.intToRGBA(image.getPixelColor(i, j))); // returns the colour of that pixel e.g. 0xFFFFFFFF
 //         }
 //     }
 // });
 
+let colorArr = [];
 let fromRBGtoHsv = function () {
     let hslArray = [];
-    let temp = fs.readFileSync('../data/picData.txt', 'utf8');
+    let temp = fs.readFileSync('/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/data/picData.txt', 'utf8');
     let lines = temp.split('\n');
     lines.forEach((line) => {
         let currentLine = line.split(',');
         let results = currentLine.map((e) => {
             return parseInt(e);
         })
-        // console.log(results);
         hslArray.push(convert.rgb.hsl(...results));
     })
-    // console.log(hslArray); 
 
-    let colorArr = [];
     for(let i = 0; i < hslArray.length; i++){
         // j:0 = h, j:2 = L
         if(hslArray[i][2] < 15){
@@ -78,8 +76,11 @@ let fromRBGtoHsv = function () {
             colorArr.push('black');
         }
     }
-    console.log(colorArr.length);
-    // fs.writeFileSync('../data/colorArrData.txt', colorArr);
+    // console.log(colorArr);
+
+    fs.writeFileSync('/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/data/colorArrData.txt', colorArr);
 }
 
 fromRBGtoHsv();
+
+module.exports = {colorArr};

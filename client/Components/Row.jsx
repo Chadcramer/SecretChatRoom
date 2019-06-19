@@ -1,15 +1,14 @@
-import React from 'react';
-import Column from './Column.jsx';
+// import React from 'react';
+// import Column from './Column.jsx';
 
-class Row extends React.Component {
-  render () {
-    return ( 
-      // 64 Columns
-    <div className='column'>
-        < Column />
+// class Row extends React.Component {
+//   render () {
+//     return ( 
+//       // 64 Columns
+//     <div className='column'>
+//         < Column />
+//     </div>
+//     )}
+// }
 
-    </div>
-    )}
-}
-
-export default Row;
+// export default Row;

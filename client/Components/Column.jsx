@@ -1,12 +1,12 @@
-import React from 'react'
+// import React from 'react'
 
-class Column extends React.Component {
-  render () {
-    return ( 
-    <div>
-      <div>X</div>
-    </div>
-    )}
-}
+// class Column extends React.Component {
+//   render () {
+//     return ( 
+//     <div className="square">
+//       <div>square</div>
+//     </div>
+//     )}
+// }
 
-export default Column;
+// export default Column;
