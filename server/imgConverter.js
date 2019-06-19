@@ -1,5 +1,5 @@
 const fs = require('fs');
-const readline = require('readline');
+// const readline = require('readline');
 var Jimp = require('jimp');
 var convert = require('color-convert');
 

@@ -4,16 +4,15 @@ body {
   
 .wrapper {
     display: grid;
+    /* number after repeat in grid-template-columns is the width # of squares */
     grid-template-columns: repeat(84, auto);
-    grid-gap: 0px;
+    /* grid-gap: 0px; */
     border: 1px solid white;
 }
   
 .box {
     background-color: white;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 15px;
     height: 15px;
-    /* padding: 20px; */
-    /* font-size: 150%; */
 }
