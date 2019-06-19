@@ -3,23 +3,30 @@ const fs = require('fs');
 var Jimp = require('jimp');
 var convert = require('color-convert');
 
+// Step one: resize original image
+
 // Jimp.read('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/757px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg', (err, image) => {
 //     if (err) throw err;
 //     image
-//       .resize(84, 64) // resize
+//       .resize(151, 120) // resize
 //       .quality(60) // set JPEG quality
 //       .write('../testimg.jpg'); // save
 //   });
 
+// Step two: Convert pixels to RGB colors, save to text file
+
 // Jimp.read("/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/testimg.jpg", function (err, image) {
-//     for(let i = 0; i < 64; i++){
-//         for(let j = 0; j < 84; j++){
+//     for(let i = 0; i < 120; i++){
+//         for(let j = 0; j < 151; j++){
 //             fs.appendFileSync('/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/data/picData.txt', Object.values((Jimp.intToRGBA(image.getPixelColor(j, i)))) + '\n')
 //             // fs.appendFileSync('../data/picData.txt', JSON.stringify((Jimp.intToRGBA(image.getPixelColor(i, j)))))
 //             // console.log(Jimp.intToRGBA(image.getPixelColor(i, j))); // returns the colour of that pixel e.g. 0xFFFFFFFF
 //         }
 //     }
 // });
+
+
+// Step three: Convert RGB colors to HSL and then push closest color to single array
 
 let colorArr = [];
 let fromRBGtoHsv = function () {
