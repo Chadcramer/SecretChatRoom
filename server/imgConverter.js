@@ -15,10 +15,10 @@ var convert = require('color-convert');
 
 // Step two: Convert pixels to RGB colors, save to text file
 
-// Jimp.read("/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/testimg.jpg", function (err, image) {
+// Jimp.read("/Users/chadcramer/Desktop/PixelPictures/testimg.jpg", function (err, image) {
 //     for(let i = 0; i < 120; i++){
 //         for(let j = 0; j < 151; j++){
-//             fs.appendFileSync('/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/data/picData.txt', Object.values((Jimp.intToRGBA(image.getPixelColor(j, i)))) + '\n')
+//             fs.appendFileSync('/Users/chadcramer/Desktop/PixelPictures/data/picData.txt', Object.values((Jimp.intToRGBA(image.getPixelColor(j, i)))) + '\n')
 //             // fs.appendFileSync('../data/picData.txt', JSON.stringify((Jimp.intToRGBA(image.getPixelColor(i, j)))))
 //             // console.log(Jimp.intToRGBA(image.getPixelColor(i, j))); // returns the colour of that pixel e.g. 0xFFFFFFFF
 //         }
@@ -31,7 +31,7 @@ var convert = require('color-convert');
 let colorArr = [];
 let fromRBGtoHsv = function () {
     let hslArray = [];
-    let temp = fs.readFileSync('/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/data/picData.txt', 'utf8');
+    let temp = fs.readFileSync('/Users/chadcramer/Desktop/PixelPictures/data/picData.txt', 'utf8');
     let lines = temp.split('\n');
     lines.forEach((line) => {
         let currentLine = line.split(',');
@@ -85,9 +85,10 @@ let fromRBGtoHsv = function () {
     }
     console.log(colorArr);
 
-    // fs.writeFileSync('/Users/chadcramer/Desktop/HrImmersive/SecretChatRoom/data/colorArrData.txt', colorArr);
+    // fs.writeFileSync('/Users/chadcramer/Desktop/PixelPictures/data/colorArrData.txt', colorArr);
 }
 
 fromRBGtoHsv();
 
 module.exports = {colorArr};
+
