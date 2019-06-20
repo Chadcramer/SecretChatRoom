@@ -1,27 +1,14 @@
 html {
     text-align: center;
     margin: auto;
-    height: 70%;
-    width: 60%;
-}
-
-#root {
-    /* display:block; */
-    /* overflow:auto; */
-
-    /* height: 100%;
-    width: 100%; */
+    height: 90%;
+    width: 64%;
 }
   
 .wrapper {
-    padding: 0;
-    margin: 0;
-
     display: grid;
-    /* number after repeat in grid-template-columns is the width (x value ) # of squares */
     grid-template-columns: repeat(151, auto);
-    /* grid-gap: 0px; */
-    /* border: 1px solid white; */
+    margin-top: 23px;
 }
   
 .box {
