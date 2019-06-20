@@ -67,11 +67,11 @@ let fromRBGtoHsv = function () {
 
         } else if(hslArray[i][0] > 150 && hslArray[i][0] < 200){
             // if(h > 150 || h < 200){ colorArr.push('Turquoise')}
-            colorArr.push('turquoise');
-
-        } else if(hslArray[i][0] > 200 && hslArray[i][0] < 270){
-            // if(h > 200 || h < 270){ colorArr.push('Blue')}
             colorArr.push('blue');
+
+        } else if(hslArray[i][0] > 200 && hslArray[i][0] < 265){
+            // if(h > 200 || h < 270){ colorArr.push('Blue')}
+            colorArr.push('purple');
 
         // } else if(hslArray[i][0] > 270 && hslArray[i][0] < 330){
             // if(h > 270 || h < 330){ colorArr.push('Pink')}
