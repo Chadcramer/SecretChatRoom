@@ -1,18 +1,33 @@
-body {
-    margin: 5px;
+html {
+    text-align: center;
+    margin: auto;
+    height: 70%;
+    width: 60%;
+}
+
+#root {
+    /* display:block; */
+    /* overflow:auto; */
+
+    /* height: 100%;
+    width: 100%; */
 }
   
 .wrapper {
+    padding: 0;
+    margin: 0;
+
     display: grid;
     /* number after repeat in grid-template-columns is the width (x value ) # of squares */
     grid-template-columns: repeat(151, auto);
     /* grid-gap: 0px; */
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
   
 .box {
-    /* background-color: white; */
-    /* border: 1px solid black; */
-    width: 10px;
-    height: 10px;
+    padding: 0;
+    margin: 0;
+
+    width: 6px;
+    height: 6px;
 }

@@ -31,7 +31,7 @@ class App extends React.Component {
           const divStyle = {
             backgroundColor: color,
           };
-          return <div className="box" key={key} onClick={this.handleClick} style={divStyle}> </div>
+          return <span className="box" key={key} onClick={this.handleClick} style={divStyle}> </span>
         })}
     </div>
 
