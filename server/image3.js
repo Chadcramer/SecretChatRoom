@@ -4,20 +4,20 @@ var convert = require('color-convert');
 
 // // Step one: resize original image
 
-// Jimp.read('https://i.ebayimg.com/images/g/umIAAOSwH-daKusf/s-l300.png', (err, image) => {
+// Jimp.read('https://scontent-lga3-1.cdninstagram.com/vp/1fa58806cb37c48acf8f48daaf221f41/5D6AFEA5/t51.2885-15/sh0.08/e35/c0.50.1080.1080/s640x640/59952105_455796608502061_2293462728868080038_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com', (err, image) => {
 //     if (err) throw err;
 //     image
 //       .resize(151, 120) // resize
 //       .quality(95) // set JPEG quality
-//       .write('../image2.jpg'); // save
+//       .write('../image3.jpg'); // save
 //   });
 
 // // Step two: Convert pixels to RGB colors, save to text file
 
-// Jimp.read("/Users/chadcramer/Desktop/HrImmersive/PixelPictures/image2.jpg", function (err, image) {
+// Jimp.read("/Users/chadcramer/Desktop/HrImmersive/PixelPictures/image3.jpg", function (err, image) {
 //     for(let i = 0; i < 120; i++){
 //         for(let j = 0; j < 151; j++){
-//             fs.appendFileSync('/Users/chadcramer/Desktop/HrImmersive/PixelPictures/data/image2Data.txt', Object.values((Jimp.intToRGBA(image.getPixelColor(j, i)))) + '\n')
+//             fs.appendFileSync('/Users/chadcramer/Desktop/HrImmersive/PixelPictures/data/image3Data.txt', Object.values((Jimp.intToRGBA(image.getPixelColor(j, i)))) + '\n')
 //             // fs.appendFileSync('../data/picData.txt', JSON.stringify((Jimp.intToRGBA(image.getPixelColor(i, j)))))
 //             // console.log(Jimp.intToRGBA(image.getPixelColor(i, j))); // returns the colour of that pixel e.g. 0xFFFFFFFF
 //         }
@@ -30,7 +30,7 @@ var convert = require('color-convert');
 let colorArr = [];
 let fromRBGtoHsv = function () {
     let hslArray = [];
-    let temp = fs.readFileSync('/Users/chadcramer/Desktop/HrImmersive/PixelPictures/data/image2Data.txt', 'utf8');
+    let temp = fs.readFileSync('/Users/chadcramer/Desktop/HrImmersive/PixelPictures/data/image3Data.txt', 'utf8');
     let lines = temp.split('\n');
     lines.forEach((line) => {
         let currentLine = line.split(',');
@@ -50,7 +50,7 @@ let fromRBGtoHsv = function () {
             // if (L > 85 === 'White') 
             colorArr.push('white');
 
-        } else if(hslArray[i][0] > 340){
+        } else if(hslArray[i][0] < 10 && hslArray[i][0] > 330){
             // if(h < 10 || h > 330){ colorArr.push('Red')}
             colorArr.push('red');
 
@@ -73,12 +73,12 @@ let fromRBGtoHsv = function () {
             // if(h > 200 || h < 270){ colorArr.push('Blue')}
             colorArr.push('blue');
 
-        // } else if(hslArray[i][0] > 270 && hslArray[i][0] < 330){
+        } else if(hslArray[i][0] > 270 && hslArray[i][0] < 330){
             // if(h > 270 || h < 330){ colorArr.push('Pink')}
-            // colorArr.push('pink');
+            colorArr.push('pink');
 
         } else {
-            colorArr.push('white');
+            colorArr.push('black');
         }
     }
     
