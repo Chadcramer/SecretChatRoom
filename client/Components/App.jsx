@@ -1,11 +1,5 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import Axios from 'axios';
-
-
-// import { Row, Col } from 'antd';
-
-// testing
 
 class App extends React.Component {
 

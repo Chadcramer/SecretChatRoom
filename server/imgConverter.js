@@ -1,5 +1,4 @@
 const fs = require('fs');
-// const readline = require('readline');
 var Jimp = require('jimp');
 var convert = require('color-convert');
 
@@ -15,7 +14,7 @@ var convert = require('color-convert');
 
 // Step two: Convert pixels to RGB colors, save to text file
 
-// Jimp.read("/Users/chadcramer/Desktop/HrImmersive/PixelPictures/data/picData.txt", function (err, image) {
+// Jimp.read("/Users/chadcramer/Desktop/HrImmersive/PixelPictures/testimg.jpg", function (err, image) {
 //     for(let i = 0; i < 120; i++){
 //         for(let j = 0; j < 151; j++){
 //             fs.appendFileSync('/Users/chadcramer/Desktop/PixelPictures/data/picData.txt', Object.values((Jimp.intToRGBA(image.getPixelColor(j, i)))) + '\n')
@@ -85,7 +84,7 @@ let fromRBGtoHsv = function () {
     }
     // console.log(colorArr);
 
-    fs.writeFileSync('/Users/chadcramer/Desktop/HrImmersive/PixelPictures/data/colorArrData.txt', colorArr);
+  // fs.writeFileSync('/Users/chadcramer/Desktop/HrImmersive/PixelPictures/data/colorArrData.txt', colorArr);
 }
 
 fromRBGtoHsv();

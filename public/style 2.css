@@ -1,0 +1,18 @@
+body {
+    margin: 5px;
+}
+  
+.wrapper {
+    display: grid;
+    /* number after repeat in grid-template-columns is the width (x value ) # of squares */
+    grid-template-columns: repeat(151, auto);
+    /* grid-gap: 0px; */
+    border: 1px solid white;
+}
+  
+.box {
+    /* background-color: white; */
+    /* border: 1px solid black; */
+    width: 10px;
+    height: 8px;
+}
