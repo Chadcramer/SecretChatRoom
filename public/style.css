@@ -12,9 +12,6 @@ html {
 }
   
 .box {
-    padding: 0;
-    margin: 0;
-
     width: 6px;
     height: 6px;
 }
